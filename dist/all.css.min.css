@@ -44,7 +44,7 @@ img{max-width:100%}
 * html .group{height:1%}
 *+html .group{display:inline-block}
 .group:after{content:".";display:block;height:0;clear:both;visibility:hidden}
-.container{padding:0 15px;max-width:1000px;margin:auto}
+.container{padding:0 15px;max-width:1200px;margin:auto}
 body,select,textarea,input{font-family:"Poppins",sans-serif}
 body{background:#1f1f1f;color:#fff;font-size:16px;line-height:1.47}
 h1{font-size:35px;line-height:1.1}
@@ -74,3 +74,13 @@ h1,h2,h3,h4,h5{font-weight:600}
 #social-icons svg{height:20px;width:auto}
 #social-icons svg path{transition:.55s}
 #social-icons a:hover svg path{fill:#f1d060 !important}
+.portfolio-row{margin:-15px;display:flex;flex-wrap:wrap}
+.portfolio-row>div{padding:15px;width:33.3%;flex:33.3%;min-width:33.3%;max-width:33.3%}
+.portfolio-row .one-portfolio .portfolio-picture{margin-bottom:15px}
+.portfolio-row .one-portfolio .portfolio-picture a{position:relative;overflow:hidden;padding-bottom:60%;display:block;border-radius:5px}
+.portfolio-row .one-portfolio .portfolio-picture a img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;object-position:center;transition:.55s;transform-origin:50% 50%}
+.portfolio-row .one-portfolio .portfolio-picture a:hover img{transform:scale(1.2)}
+.portfolio-row .one-portfolio .portfolio-title{font-weight:600;margin-bottom:0}
+.portfolio-row .one-portfolio .portfolio-title a{color:#fff}
+.portfolio-row .one-portfolio .portfolio-title a:hover{color:#f1d060}
+.img-fluid{width:100%;height:auto}
