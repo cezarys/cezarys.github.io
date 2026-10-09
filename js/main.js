@@ -153,12 +153,16 @@
     finishLoading();
   } else {
     var counter = { v: 0 };
+    var slots = document.querySelectorAll('.loader-num i');
     gsap.timeline({ onComplete: finishLoading })
       .to(counter, {
-        v: 100, duration: 1.8, ease: 'power2.inOut',
-        onUpdate: function () { document.querySelector('.loader-num').textContent = Math.round(counter.v); }
+        v: 100, duration: 1.1, ease: 'power2.inOut',
+        onUpdate: function () {
+          var d = String(Math.round(counter.v)).padStart(3, ' ');
+          for (var i = 0; i < 3; i++) slots[i].textContent = d[i] === ' ' ? '' : d[i];
+        }
       })
-      .to('.loader-bar i', { width: '100%', duration: 1.8, ease: 'power2.inOut' }, 0)
+      .to('.loader-bar i', { scaleX: 1, duration: 1.1, ease: 'power2.inOut' }, 0)
       .to('.loader-count, .loader-name', { yPercent: -40, opacity: 0, duration: .5, ease: 'power2.in' })
       .to('.loader', { yPercent: -100, duration: 1, ease: 'expo.inOut' }, '-=.15')
       .add(heroIntro(), '-=.55')

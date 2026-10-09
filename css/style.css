@@ -1,3 +1,7 @@
+@font-face { font-family: 'Syne'; src: url(../fonts/syne.woff2) format('woff2'); font-weight: 400 800; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Inter'; src: url(../fonts/inter.woff2) format('woff2'); font-weight: 100 900; font-style: normal; font-display: swap; }
+@font-face { font-family: 'JetBrains Mono'; src: url(../fonts/jetbrains-mono.woff2) format('woff2'); font-weight: 100 800; font-style: normal; font-display: swap; }
+
 :root {
   --bg: #0b0b0c;
   --bg-2: #141416;
@@ -87,6 +91,8 @@ ul, ol { list-style: none; }
 }
 
 .loader-count small { font-size: .3em; vertical-align: top; }
+/* fixed digit slots so the counter never changes width (was the CLS source) */
+.loader-num i { display: inline-block; width: 1.06em; text-align: center; font-style: normal; }
 
 .loader-name {
   font-family: var(--mono);
@@ -104,7 +110,7 @@ ul, ol { list-style: none; }
   background: rgba(11, 11, 12, .15);
 }
 
-.loader-bar i { display: block; height: 100%; width: 0; background: var(--bg); }
+.loader-bar i { display: block; height: 100%; width: 100%; transform: scaleX(0); transform-origin: 0 50%; background: var(--bg); }
 
 /* ---------- cursor ---------- */
 .cursor { position: fixed; left: 0; top: 0; z-index: 999; pointer-events: none; mix-blend-mode: difference; }
