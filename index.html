@@ -11,6 +11,20 @@
   <link rel="icon" href="favicon.ico" sizes="48x48">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <!-- Google Analytics 4 with Consent Mode: nothing is stored until the visitor accepts the banner -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    var csConsent = null;
+    try { csConsent = localStorage.getItem('cs-consent'); } catch (e) {}
+    gtag('consent', 'default', {
+      analytics_storage: csConsent === 'granted' ? 'granted' : 'denied',
+      ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied'
+    });
+    gtag('js', new Date());
+    gtag('config', 'G-9VTT3Y4H9Z');
+  </script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9VTT3Y4H9Z"></script>
   <link rel="preload" href="fonts/syne.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="css/style.css">
@@ -265,6 +279,29 @@
 </footer>
 
 <!-- GSAP 3.13.0 (core, ScrollTrigger, SplitText, DrawSVG) + Lenis 1.1.13, bundled locally -->
+<!-- analytics consent -->
+<div class="consent" role="dialog" aria-label="Cookie consent" hidden>
+  <p>I use Google Analytics to see how visitors find this site. OK to set analytics cookies?</p>
+  <div class="consent-actions">
+    <button type="button" class="consent-no">No thanks</button>
+    <button type="button" class="btn btn-small consent-yes"><span>Accept</span></button>
+  </div>
+</div>
+<script>
+  (function () {
+    var box = document.querySelector('.consent');
+    if (csConsent) return;
+    box.hidden = false;
+    function choose(v) {
+      try { localStorage.setItem('cs-consent', v); } catch (e) {}
+      gtag('consent', 'update', { analytics_storage: v });
+      box.classList.add('is-gone');
+      setTimeout(function () { box.hidden = true; }, 400);
+    }
+    box.querySelector('.consent-yes').addEventListener('click', function () { choose('granted'); });
+    box.querySelector('.consent-no').addEventListener('click', function () { choose('denied'); });
+  })();
+</script>
 <script src="js/vendor.js" defer></script>
 <script src="js/main.js" defer></script>
 </body>
