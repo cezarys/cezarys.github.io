@@ -137,7 +137,9 @@
     tl.from(heroSplit.chars, { yPercent: 115, rotate: 12, duration: 1.2, ease: 'expo.out', stagger: .045 })
       .from('.hero-badge', { scale: 0, rotate: -90, duration: .9, ease: 'back.out(2)' }, '-=.7')
       .from('.hero-eyebrow', { y: 20, opacity: 0, duration: .8, ease: 'power3.out' }, '-=.9')
-      .from('.hero-lead, .hero-scroll', { y: 30, opacity: 0, duration: .9, ease: 'power3.out', stagger: .1 }, '-=.7')
+      .from('.hero-scroll', { y: 30, opacity: 0, duration: .9, ease: 'power3.out' }, '-=.7')
+      // slide only (no fade): the lead is the LCP element and must count as painted under the loader
+      .from('.hero-lead', { y: 40, duration: 1, ease: 'power3.out' }, '<')
       .from('.nav > *', { y: -30, opacity: 0, duration: .8, ease: 'power3.out', stagger: .08 }, '-=.9')
       .from('.hero-canvas', { opacity: 0, duration: 1.4 }, '-=1.2');
     return tl;
