@@ -327,8 +327,8 @@
     gsap.from(card.querySelector('blockquote'), { y: 60, opacity: 0, duration: 1, ease: 'power3.out', scrollTrigger: { trigger: card, start: 'top 75%' } });
     if (i === reviews.length - 1) return;
     gsap.to(card, {
-      scale: .9 - (reviews.length - i) * .01, filter: 'brightness(.55)', ease: 'none',
-      // on phones the cards fill the screen, so only dim once the next card is past the middle
+      scale: .9 - (reviews.length - i) * .01, ease: 'none', // no dimming, cards stay readable
+      // on phones the cards fill the screen, so only shrink once the next card is past the middle
       scrollTrigger: {
         trigger: reviews[i + 1], scrub: true, invalidateOnRefresh: true,
         start: function () { return innerWidth <= 900 ? 'top 40%' : 'top bottom'; },
