@@ -328,7 +328,12 @@
     if (i === reviews.length - 1) return;
     gsap.to(card, {
       scale: .9 - (reviews.length - i) * .01, filter: 'brightness(.55)', ease: 'none',
-      scrollTrigger: { trigger: reviews[i + 1], start: 'top bottom', end: 'top 14%', scrub: true }
+      // on phones the cards fill the screen, so only dim once the next card is past the middle
+      scrollTrigger: {
+        trigger: reviews[i + 1], scrub: true, invalidateOnRefresh: true,
+        start: function () { return innerWidth <= 900 ? 'top 40%' : 'top bottom'; },
+        end: function () { return innerWidth <= 900 ? 'top 10%' : 'top 14%'; }
+      }
     });
   });
 
