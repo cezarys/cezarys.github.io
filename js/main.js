@@ -97,6 +97,7 @@
       if (visible) {
         t += reduced ? 0 : .012;
         ctx.clearRect(0, 0, w, h);
+        // globalAlpha + tiny squares instead of a new rgba() string and arc path per dot: same look at 2px, far less work
         for (var i = 0; i < dots.length; i++) {
           var d = dots[i];
           var wave = Math.sin(d.ox * .008 + t) * Math.cos(d.oy * .01 + t * .8);
@@ -107,18 +108,26 @@
           var ty = d.oy + (dist ? dy / dist : 0) * force * 46 + wave * 6;
           d.x += (tx - d.x) * .12;
           d.y += (ty - d.y) * .12;
-          var a = .12 + (wave + 1) * .08 + force * .7;
-          ctx.fillStyle = force > .05 ? 'rgba(212,255,58,' + a + ')' : 'rgba(242,239,233,' + a + ')';
-          ctx.beginPath();
-          ctx.arc(d.x, d.y, 1.2 + force * 2.4, 0, 6.283);
-          ctx.fill();
+          ctx.globalAlpha = Math.min(1, .12 + (wave + 1) * .08 + force * .7);
+          if (force > .05) {
+            // the few dots near the cursor are big enough to look square, so keep those round
+            ctx.fillStyle = '#d4ff3a';
+            ctx.beginPath(); ctx.arc(d.x, d.y, 1.2 + force * 2.4, 0, 6.283); ctx.fill();
+          } else {
+            ctx.fillStyle = '#f2efe9';
+            ctx.fillRect(d.x - 1.2, d.y - 1.2, 2.4, 2.4);
+          }
         }
+        ctx.globalAlpha = 1;
       }
       requestAnimationFrame(draw);
     }
 
     build();
-    draw();
+    // the loader covers the hero, so don't spend main-thread time on the field until it's gone
+    window.startDotField = function () { if (!started) { started = true; draw(); } };
+    var started = false;
+    if (reduced) window.startDotField();
     var rt;
     window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(build, 150); });
   })();
@@ -148,6 +157,7 @@
   function finishLoading() {
     document.body.classList.remove('is-loading');
     ScrollTrigger.refresh();
+    if (window.startDotField) window.startDotField();
   }
 
   if (reduced) {
