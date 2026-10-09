@@ -208,7 +208,7 @@
   /* ---------- headings ---------- */
   headingSplits.forEach(function (s) {
     gsap.from(s.words, {
-      yPercent: 110, rotate: 6, duration: 1, ease: 'expo.out', stagger: .06,
+      yPercent: 130, rotate: 6, duration: 1, ease: 'expo.out', stagger: .06,
       scrollTrigger: { trigger: s.elements[0], start: 'top 85%' }
     });
   });
@@ -279,20 +279,36 @@
     var pRot = gsap.quickTo(preview, 'rotation', { duration: .6, ease: 'power3' });
     document.querySelectorAll('.work-item').forEach(function (a) { new Image().src = a.dataset.img; });
     var lastX = 0;
-    window.addEventListener('mousemove', function (e) { pX(e.clientX); pY(e.clientY); pRot(gsap.utils.clamp(-14, 14, (e.clientX - lastX) * .6)); lastX = e.clientX; });
+    var mouse = { x: -1, y: -1 }, active = null;
 
-    document.querySelectorAll('.work-item').forEach(function (item) {
-      item.addEventListener('mouseenter', function () {
-        preview.querySelector('img').src = item.dataset.img;
-        gsap.to(preview, { opacity: 1, scale: 1, duration: .5, ease: 'expo.out' });
-        gsap.fromTo(preview.querySelector('img'), { scale: 1.25 }, { scale: 1, duration: .9, ease: 'expo.out' });
-        cursor.classList.add('is-view');
-      });
-      item.addEventListener('mouseleave', function () {
-        gsap.to(preview, { opacity: 0, scale: .6, duration: .4, ease: 'power3.in' });
+    function show(item) {
+      if (item === active) return;
+      active = item;
+      if (!item) {
+        gsap.to(preview, { opacity: 0, scale: .6, duration: .4, ease: 'power3.in', overwrite: 'auto' });
         cursor.classList.remove('is-view');
-      });
+        return;
+      }
+      preview.querySelector('img').src = item.dataset.img;
+      gsap.to(preview, { opacity: 1, scale: 1, duration: .5, ease: 'expo.out', overwrite: 'auto' });
+      gsap.fromTo(preview.querySelector('img'), { scale: 1.25 }, { scale: 1, duration: .9, ease: 'expo.out' });
+      cursor.classList.add('is-view');
+    }
+
+    // hit-test instead of mouseenter/leave: while (smooth) scrolling the list slides
+    // under a still pointer and the browser fires no leave event, so the preview stuck
+    function check() {
+      var el = mouse.x < 0 ? null : document.elementFromPoint(mouse.x, mouse.y);
+      show(el && el.closest('.work-item'));
+    }
+
+    window.addEventListener('mousemove', function (e) {
+      mouse.x = e.clientX; mouse.y = e.clientY;
+      pX(e.clientX); pY(e.clientY); pRot(gsap.utils.clamp(-14, 14, (e.clientX - lastX) * .6)); lastX = e.clientX;
+      check();
     });
+    window.addEventListener('scroll', check, { passive: true });
+    document.documentElement.addEventListener('mouseleave', function () { mouse.x = -1; show(null); });
   }
 
   /* ---------- reviews: stacked cards shrink as the next one arrives ---------- */
