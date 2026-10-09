@@ -1,335 +1,272 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <title>Cezary Siwa - personal portfolio</title>
-    <link rel="stylesheet" type="text/css" href="dist/all.css.min.css"/>
-    <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/4003451?v=4">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-          rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cezary Siwa — WordPress Developer</title>
+  <meta name="description" content="Cezary Siwa — WordPress, WooCommerce, React/Next.js and Webflow developer. 1,300+ projects since 2013, Top Rated Plus on Upwork.">
+  <meta property="og:title" content="Cezary Siwa — WordPress Developer">
+  <meta property="og:description" content="Custom WordPress themes, plugins, WooCommerce and headless builds. 1,300+ projects since 2013.">
+  <meta name="theme-color" content="#0b0b0c">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-<div class="container">
-    <div id="main-row">
-        <div class="one-column">
-            <div id="left-column" class="one-column-content sticky-column">
-                <p id="picture">
-                    <img src="https://avatars.githubusercontent.com/u/4003451?v=4" alt="Cezary Siwa"/>
-                </p>
-                <h1>
-                    Cezary Siwa
-                </h1>
-                <p>
-                    Full Stack Developer
-                </p>
-                <p id="social-icons">
-                    <a href="https://www.linkedin.com/in/cezary-s-36584647/" target="_blank">
-                        <svg height="800px" width="800px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-                             xmlns:xlink="http://www.w3.org/1999/xlink"
-                             viewBox="0 0 382 382" xml:space="preserve">
-<path style="fill:#fff;" d="M347.445,0H34.555C15.471,0,0,15.471,0,34.555v312.889C0,366.529,15.471,382,34.555,382h312.889
-	C366.529,382,382,366.529,382,347.444V34.555C382,15.471,366.529,0,347.445,0z M118.207,329.844c0,5.554-4.502,10.056-10.056,10.056
-	H65.345c-5.554,0-10.056-4.502-10.056-10.056V150.403c0-5.554,4.502-10.056,10.056-10.056h42.806
-	c5.554,0,10.056,4.502,10.056,10.056V329.844z M86.748,123.432c-22.459,0-40.666-18.207-40.666-40.666S64.289,42.1,86.748,42.1
-	s40.666,18.207,40.666,40.666S109.208,123.432,86.748,123.432z M341.91,330.654c0,5.106-4.14,9.246-9.246,9.246H286.73
-	c-5.106,0-9.246-4.14-9.246-9.246v-84.168c0-12.556,3.683-55.021-32.813-55.021c-28.309,0-34.051,29.066-35.204,42.11v97.079
-	c0,5.106-4.139,9.246-9.246,9.246h-44.426c-5.106,0-9.246-4.14-9.246-9.246V149.593c0-5.106,4.14-9.246,9.246-9.246h44.426
-	c5.106,0,9.246,4.14,9.246,9.246v15.655c10.497-15.753,26.097-27.912,59.312-27.912c73.552,0,73.131,68.716,73.131,106.472
-	L341.91,330.654L341.91,330.654z"/>
-</svg>
-                    </a>
-                    <a href="https://github.com/cezarys" target="_blank">
+<body class="is-loading">
 
-                        <svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z"
-                                  transform="scale(64)" fill="#fff"/>
-                        </svg>
-
-                    </a>
-
-                    <a href="mailto:cezary.siwa@gmail.com">
-                        <svg height="800px" width="800px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                             viewBox="0 0 305.616 305.616" xml:space="preserve">
-<g>
-	<path style="fill:#fff;" d="M24.818,260.333c-24.459,0-0.397-24.818-0.397-24.818l62.359-68.532
-		c6.065-6.663,17.769-16.78,24.612-11.199c6.842,5.58,15.98,16.888,22.344,23.268l12.896,12.907c6.913,6.119,12.232,0,12.232,0
-		l13.195-12.999c6.418-6.326,15.61-17.362,22.463-22.496c6.853-5.134,18.509,4.629,24.557,11.308l61.994,68.5
-		c24.47,24.062,0.397,24.062,0.397,24.062H24.818z M35.403,203.951c-6.065,6.668-14.925,18.264-20.913,24.998
-		C7.729,236.548,0,242.318,0,229.009L0.294,95.311c0.022-9.013-0.228-26.2,5.929-23.116c2.29,1.148,5.423,3.535,9.676,7.794
-		l50.464,41.288c6.973,5.706,16.801,12.689,20.016,17.34c2.029,2.932,2.959,6.342,0.022,9.29L35.403,203.951z M171.423,156.452
-		c-6.967,5.716-14.539,13.826-18.406,13.837c-3.867,0.005-11.58-7.919-18.58-13.598L24.634,67.621
-		c-7-5.673-19.058-17.1-13.065-20.163c4.329-2.214,11.895-2.176,11.895-2.176h258.029c23.23,0,11.417,11.471,11.417,11.471
-		L171.423,156.452z M291.11,228.949c-5.999-6.728-14.865-18.33-20.924-24.998l-50.969-56.05c-2.953-2.948-2.029-6.358,0-9.29
-		c3.214-4.65,13.048-11.629,20.027-17.334l37.845-30.959c6.973-5.706,16.143-15.039,22.295-18.123
-		c6.152-3.084,5.885,14.109,5.907,23.116l0.326,133.698C305.621,242.318,297.881,236.548,291.11,228.949z"/>
-</g>
-</svg>
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="one-column">
-            <div class="one-column-content">
-                <h2>
-                    About Me
-                </h2>
-
-                <p>
-                    My journey into web development began when I was 12-back in the days when having an internet
-                    connection was a rarity. I taught myself HTML from CD-magazine tutorials and later contributed to
-                    the demoscene as a 3D graphician during high school. I went on to study Computer Science at Nicolaus
-                    Copernicus University in Toruń and started my first web development job in 2008 while still a
-                    student. For several years I worked with digital agencies, building bespoke solutions for a wide
-                    range of clients.
-                </p>
-                <p>
-                    Since 2013 I’ve been a full-time freelancer on Upwork, specializing in WordPress and PHP, while also
-                    working with technologies such as Node.js, Python, and React. I’ve contributed products to
-                    CodeCanyon-although I eventually discontinued them, they were fully reviewed and approved by their
-                    team. Over the years, I’ve completed more than 1,000 projects on Upwork, totaling over $1M USD in
-                    contract work.
-                </p>
-                <p>
-                    I’m a dedicated, hardworking freelancer who loves learning new technologies and taking on fresh
-                    challenges. I genuinely believe the internet is one of humanity’s greatest achievements, and I’m
-                    proud
-                    to contribute to its ongoing development.
-                </p>
-
-                <h2>
-                    Resume
-                </h2>
-
-                <h3>
-                    Education
-                </h3>
-
-                <p>
-                    <strong>Nicolaus Copernicus University</strong> - Bachelor of Computer Science
-                    <br/>
-                    <span>
-                        2006-2010
-                    </span>
-                </p>
-
-                <h3>
-                    Experience
-                </h3>
-
-                <p>
-                    <span>
-                        2008 - 2013
-                    </span>
-                    <strong>
-                        Web Developer
-                    </strong>
-                    <br/>
-                    During this time, I collaborated with several digital agencies, focusing on web development. I
-                    gained experience translating designs into clean, responsive HTML/CSS and integrating them with
-                    custom PHP-based CMS platforms.
-
-                </p>
-
-                <p>
-                    <span>
-                        2013
-                    </span>
-                    <strong>
-                        Freelancing
-                    </strong>
-                    <br/>
-                    Since 2013, I have been working as a full-time freelancer, primarily focused on web development.
-                    I’ve developed deep, core-level expertise in WordPress and have completed more than 1,000 projects
-                    on Upwork. Not all of these were WordPress-based - I’ve also worked extensively with Node.js, React,
-                    and Shopify. I maintain strong relationships with many returning clients, reflecting my commitment
-                    to delivering high-quality work and reliable results.
-
-                </p>
-
-                <h2>
-                    Portfolio
-                </h2>
-                <div class="portfolio-row">
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://hemposolutions.eu/" target="_blank">
-                                    <img src="./images/hemposolutions.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://hemposolutions.eu/" target="_blank">
-                                    Hempo Solutions
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                WordPress Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://www.naturalisdog.com/" target="_blank">
-                                    <img src="./images/naturalisdog.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://www.naturalisdog.com/" target="_blank">
-                                    Naturalis Dog®
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                Shopify Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://www.gallusdetox.com/" target="_blank">
-                                    <img src="./images/gallus.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://www.gallusdetox.com/" target="_blank">
-                                    Gallus Detox
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                WordPress Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://www.silberthal.de/" target="_blank">
-                                    <img src="./images/silberthal.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://www.silberthal.de/" target="_blank">
-                                    SILBERTHAL
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                Shopify Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://ergotherapie.ch/" target="_blank">
-                                    <img src="./images/ergotherapie.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://ergotherapie.ch/" target="_blank">
-                                    Ergotherapie-Verband
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                WordPress Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://www.weissenstein-bad.de" target="_blank">
-                                    <img src="./images/weissenstein-bad.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://www.weissenstein-bad.de" target="_blank">
-                                    Weissenstein
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                WordPress Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://ppcdesigns.com/" target="_blank">
-                                    <img src="./images/ppcdesigns.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://ppcdesigns.com/" target="_blank">
-                                    PPC Designs
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                WordPress Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://www.soulcakes-ingolstadt.de/" target="_blank">
-                                    <img src="./images/soulcakes-ingolstadt.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://www.soulcakes-ingolstadt.de/" target="_blank">
-                                    Café Soulcakes Ingolstad
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                Shopify Theme
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div class="one-portfolio">
-                            <p class="portfolio-picture">
-                                <a href="https://zuckerschmuck.com/" target="_blank">
-                                    <img src="./images/zuckerschmuck.jpeg" alt=""/>
-                                </a>
-                            </p>
-                            <p class="portfolio-title">
-                                <a href="https://zuckerschmuck.com/" target="_blank">
-                                    Zuckerschmuck
-                                </a>
-                            </p>
-                            <p class="portfolio-type">
-                                Shopify Theme
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <h2>
-                    Testimonials
-                </h2>
-                <p>
-                    <img src="./images/review-1.jpeg" class="img-fluid" alt="Review"/>
-                </p>
-                <p>
-                    <img src="./images/review-2.jpeg" class="img-fluid" alt="Review"/>
-                </p>
-                <p>
-                    <img src="./images/review-3.jpeg" class="img-fluid" alt="Review"/>
-                </p>
-
-            </div>
-        </div>
-    </div>
+<!-- preloader -->
+<div class="loader" aria-hidden="true">
+  <div class="loader-count"><span class="loader-num">0</span><small>%</small></div>
+  <div class="loader-name">Cezary Siwa</div>
+  <div class="loader-bar"><i></i></div>
 </div>
 
+<!-- cursor -->
+<div class="cursor" aria-hidden="true"><div class="cursor-dot"></div><div class="cursor-ring"><span class="cursor-label">View</span></div></div>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><i></i></div>
+
+<header class="nav">
+  <a href="#top" class="nav-logo magnetic" aria-label="Cezary Siwa">CS<span>.</span></a>
+  <nav class="nav-links">
+    <a href="#services" class="link-roll"><span data-text="Services">Services</span></a>
+    <a href="#work" class="link-roll"><span data-text="Work">Work</span></a>
+    <a href="#reviews" class="link-roll"><span data-text="Reviews">Reviews</span></a>
+    <a href="#about" class="link-roll"><span data-text="About">About</span></a>
+  </nav>
+  <a href="#contact" class="btn btn-small magnetic"><span>Let's talk</span></a>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <canvas class="hero-canvas" aria-hidden="true"></canvas>
+    <div class="hero-inner">
+      <p class="eyebrow hero-eyebrow"><span class="pulse"></span> Available for new projects</p>
+      <h1 class="hero-title">
+        <span class="line"><span class="split">Cezary</span></span>
+        <span class="line line-2"><span class="split">Siwa</span><em class="hero-badge">dev</em></span>
+      </h1>
+      <div class="hero-bottom">
+        <p class="hero-lead">WordPress developer who turns designs into fast, clean, maintainable websites. <strong>1,300+ projects</strong> shipped for agencies and businesses since 2013.</p>
+        <a href="#work" class="hero-scroll magnetic" aria-label="Scroll down">
+          <svg viewBox="0 0 100 100"><defs><path id="circ" d="M50,50 m-38,0 a38,38 0 1,1 76,0 a38,38 0 1,1 -76,0"/></defs><text><textPath href="#circ">scroll • scroll • scroll • scroll • </textPath></text></svg>
+          <i>↓</i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <section class="marquee" aria-label="Technologies">
+    <div class="marquee-track">
+      <div class="marquee-row">
+        <span>WordPress</span><b>✦</b><span>WooCommerce</span><b>✦</b><span>ACF</span><b>✦</b><span>Gutenberg</span><b>✦</b><span>React</span><b>✦</b><span>Next.js</span><b>✦</b><span>Webflow</span><b>✦</b><span>Shopify</span><b>✦</b><span>PHP</span><b>✦</b><span>GSAP</span><b>✦</b>
+      </div>
+    </div>
+    <div class="marquee-track marquee-track--rev">
+      <div class="marquee-row">
+        <span>Figma → WordPress</span><b>●</b><span>Headless</span><b>●</b><span>REST API</span><b>●</b><span>Core Web Vitals</span><b>●</b><span>WPML</span><b>●</b><span>Gravity Forms</span><b>●</b><span>Multisite</span><b>●</b>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATEMENT -->
+  <section class="statement">
+    <p class="eyebrow">( 01 ) — Intro</p>
+    <p class="statement-text">I build websites the way agencies wish every developer did: pixel-perfect to the design, quick to deliver, easy to edit for the client, and still running smoothly years later. Long-term partner for agencies, studios and startups around the world.</p>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat"><div class="stat-num"><span data-count="1344">0</span><sup>+</sup></div><p>Jobs completed on Upwork</p></div>
+    <div class="stat"><div class="stat-num"><sup>$</sup><span data-count="1">0</span><em>M</em><sup>+</sup></div><p>Earned with happy clients</p></div>
+    <div class="stat"><div class="stat-num"><span data-count="5176">0</span></div><p>Hours billed</p></div>
+    <div class="stat"><div class="stat-num"><span data-count="100">0</span><sup>%</sup></div><p>Job Success · Top Rated Plus</p></div>
+  </section>
+
+  <!-- SERVICES (horizontal) -->
+  <section class="services" id="services">
+    <div class="services-head">
+      <p class="eyebrow">( 02 ) — What I do</p>
+      <h2 class="h2 split-words">Everything your site needs, <em>under one roof.</em></h2>
+    </div>
+    <div class="services-pin">
+      <div class="services-track">
+        <article class="card">
+          <span class="card-no">01</span>
+          <div class="card-icon"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M14 22l12 30 6-18 6 18 12-30"/></svg></div>
+          <h3>Custom WordPress themes</h3>
+          <p>Figma, XD or PSD turned into a hand-coded theme. ACF flexible content, Gutenberg blocks, no page-builder bloat.</p>
+          <ul><li>ACF</li><li>Gutenberg</li><li>Figma → WP</li></ul>
+        </article>
+        <article class="card">
+          <span class="card-no">02</span>
+          <div class="card-icon"><svg viewBox="0 0 64 64"><rect x="10" y="18" width="44" height="34" rx="4"/><path d="M22 18v-6h20v6M10 30h44"/></svg></div>
+          <h3>WooCommerce stores</h3>
+          <p>Shops that sell: custom product logic, checkout tweaks, subscriptions, payment and shipping integrations.</p>
+          <ul><li>Checkout</li><li>Subscriptions</li><li>Integrations</li></ul>
+        </article>
+        <article class="card">
+          <span class="card-no">03</span>
+          <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M24 16L8 32l16 16M40 16l16 16-16 16M36 10L28 54"/></svg></div>
+          <h3>Plugins &amp; integrations</h3>
+          <p>Bespoke plugins, REST API connections, CRMs, Mailchimp, Gravity Forms and custom admin tools.</p>
+          <ul><li>PHP</li><li>REST API</li><li>Gravity Forms</li></ul>
+        </article>
+        <article class="card">
+          <span class="card-no">04</span>
+          <div class="card-icon"><svg viewBox="0 0 64 64"><ellipse cx="32" cy="32" rx="26" ry="10"/><ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(60 32 32)"/><ellipse cx="32" cy="32" rx="26" ry="10" transform="rotate(120 32 32)"/><circle cx="32" cy="32" r="3"/></svg></div>
+          <h3>React, Next.js &amp; headless</h3>
+          <p>Modern frontends and headless WordPress, when speed and app-like interactions matter.</p>
+          <ul><li>React</li><li>Next.js</li><li>Headless WP</li></ul>
+        </article>
+        <article class="card">
+          <span class="card-no">05</span>
+          <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M8 20c8 0 10 24 16 24s8-24 16-24 10 24 16 24"/></svg></div>
+          <h3>Webflow</h3>
+          <p>Figma to Webflow with a clean CMS setup, responsive layouts and smooth interactions.</p>
+          <ul><li>CMS</li><li>Interactions</li><li>SEO</li></ul>
+        </article>
+        <article class="card">
+          <span class="card-no">06</span>
+          <div class="card-icon"><svg viewBox="0 0 64 64"><path d="M32 54a22 22 0 1 1 22-22"/><path d="M32 32l14-12"/><circle cx="32" cy="32" r="3"/></svg></div>
+          <h3>Speed &amp; care</h3>
+          <p>Core Web Vitals, migrations (Joomla → WP, hosts, staging), security and long-term maintenance.</p>
+          <ul><li>Performance</li><li>Migrations</li><li>Support</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <p class="eyebrow">( 03 ) — How it works</p>
+    <h2 class="h2 split-words">From design file <em>to live site.</em></h2>
+    <div class="process-wrap">
+      <svg class="process-line" viewBox="0 0 1000 600" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M40,40 C300,40 300,200 500,200 S700,360 960,360 S800,560 520,560"/>
+      </svg>
+      <ol class="process-steps">
+        <li><span>01</span><h3>Brief &amp; design</h3><p>You send the Figma, a few pages of notes or just an idea. I ask the right questions up front.</p></li>
+        <li><span>02</span><h3>Build</h3><p>Clean, componentised code with an editor-friendly admin. Staging link early, updates often.</p></li>
+        <li><span>03</span><h3>Polish</h3><p>Pixel checks on every breakpoint, animations, speed and SEO basics.</p></li>
+        <li><span>04</span><h3>Launch &amp; care</h3><p>Smooth go-live, then I stay around for fixes, new pages and the next phase.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- WORK -->
+  <section class="work" id="work">
+    <div class="work-head">
+      <p class="eyebrow">( 04 ) — Selected work</p>
+      <h2 class="h2 split-words">A few of <em>1,300+.</em></h2>
+    </div>
+    <ul class="work-list">
+      <li><a class="work-item" href="https://hemposolutions.eu/" target="_blank" rel="noopener" data-img="images/work/hemposolutions.webp">
+        <span class="work-no">01</span><h3>Hempo Solutions</h3><span class="work-tags">WordPress theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/hemposolutions.webp" alt="Hempo Solutions website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://www.naturalisdog.com/" target="_blank" rel="noopener" data-img="images/work/naturalisdog.webp">
+        <span class="work-no">02</span><h3>Naturalis Dog®</h3><span class="work-tags">Shopify theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/naturalisdog.webp" alt="Naturalis Dog® website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://www.gallusdetox.com/" target="_blank" rel="noopener" data-img="images/work/gallus.webp">
+        <span class="work-no">03</span><h3>Gallus Detox</h3><span class="work-tags">WordPress theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/gallus.webp" alt="Gallus Detox website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://www.silberthal.de/" target="_blank" rel="noopener" data-img="images/work/silberthal.webp">
+        <span class="work-no">04</span><h3>Silberthal</h3><span class="work-tags">Shopify theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/silberthal.webp" alt="Silberthal website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://ergotherapie.ch/" target="_blank" rel="noopener" data-img="images/work/ergotherapie.webp">
+        <span class="work-no">05</span><h3>Ergotherapie-Verband</h3><span class="work-tags">WordPress theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/ergotherapie.webp" alt="Ergotherapie-Verband website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://www.weissenstein-bad.de/" target="_blank" rel="noopener" data-img="images/work/weissenstein-bad.webp">
+        <span class="work-no">06</span><h3>Weissenstein</h3><span class="work-tags">WordPress theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/weissenstein-bad.webp" alt="Weissenstein website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://ppcdesigns.com/" target="_blank" rel="noopener" data-img="images/work/ppcdesigns.webp">
+        <span class="work-no">07</span><h3>PPC Designs</h3><span class="work-tags">WordPress theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/ppcdesigns.webp" alt="PPC Designs website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://www.soulcakes-ingolstadt.de/" target="_blank" rel="noopener" data-img="images/work/soulcakes-ingolstadt.webp">
+        <span class="work-no">08</span><h3>Café Soulcakes</h3><span class="work-tags">Shopify theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/soulcakes-ingolstadt.webp" alt="Café Soulcakes website" width="1000" height="560" loading="lazy">
+      </a></li>
+      <li><a class="work-item" href="https://zuckerschmuck.com/" target="_blank" rel="noopener" data-img="images/work/zuckerschmuck.webp">
+        <span class="work-no">09</span><h3>Zuckerschmuck</h3><span class="work-tags">Shopify theme</span><span class="work-arrow">↗</span>
+        <img class="work-thumb" src="images/work/zuckerschmuck.webp" alt="Zuckerschmuck website" width="1000" height="560" loading="lazy">
+      </a></li>
+    </ul>
+    <div class="work-preview" aria-hidden="true"><div class="work-preview-inner"><img alt=""><span class="wp-label">Visit site ↗</span></div></div>
+  </section>
+
+  <!-- REVIEWS (stacking) -->
+  <section class="reviews" id="reviews">
+    <div class="reviews-head">
+      <p class="eyebrow">( 05 ) — Kind words</p>
+      <h2 class="h2 split-words">What clients <em>say.</em></h2>
+    </div>
+    <div class="stack">
+      <figure class="review" style="--c:#d4ff3a"><div class="stars">★★★★★</div><blockquote>“Cezary is probably one of the best developers I ever worked with. Not only he knows exactly what needs to be done but he is always making himself available.”</blockquote><figcaption>Upwork client</figcaption></figure>
+      <figure class="review" style="--c:#7a5cff"><div class="stars">★★★★★</div><blockquote>“Cezary is an excellent and disciplined developer capable of making the best decisions without the need of micro managing.”</blockquote><figcaption>Agency client</figcaption></figure>
+      <figure class="review" style="--c:#ff6b3d"><div class="stars">★★★★★</div><blockquote>“The best experience with any developer I've had on Upwork. Everything was done right and ahead of schedule.”</blockquote><figcaption>Upwork client</figcaption></figure>
+      <figure class="review" style="--c:#3dd6ff"><div class="stars">★★★★★</div><blockquote>“Hyper efficient, quick, and can tackle any request. Excited to work on the next project.”</blockquote><figcaption>Repeat client</figcaption></figure>
+      <figure class="review" style="--c:#ff3d8b"><div class="stars">★★★★★</div><blockquote>“I tested 5 web developers and he was my favorite.”</blockquote><figcaption>Upwork client</figcaption></figure>
+    </div>
+  </section>
+
+  <!-- ABOUT / TIMELINE -->
+  <section class="about" id="about">
+    <div class="about-grid">
+      <div class="about-left">
+        <p class="eyebrow">( 06 ) — About</p>
+        <h2 class="h2 split-words">15+ years of <em>shipping.</em></h2>
+        <p class="about-text">Computer science graduate, PHP programmer at a Polish interactive agency, and a full-time freelancer since 2013, working remotely with agencies and businesses in the US, UK and Europe. English and Polish.</p>
+        <ul class="badges">
+          <li>Top Rated Plus</li><li>100% Job Success</li><li>AWS DevOps Professional</li><li>WordPress Multisite</li>
+        </ul>
+      </div>
+      <ol class="timeline">
+        <li><span class="tl-year">2006</span><div><h3>Computer Science, BSc</h3><p>Nicolaus Copernicus University</p></div></li>
+        <li><span class="tl-year">2011</span><div><h3>PHP Programmer</h3><p>GoldenSubmarine (interactive agency, Warsaw &amp; Poznań) and Juggernaut Technology (remote)</p></div></li>
+        <li><span class="tl-year">2013</span><div><h3>Full-time freelancer</h3><p>Upwork: 1,300+ jobs, 5,000+ hours, $1M+ earned</p></div></li>
+        <li><span class="tl-year">Now</span><div><h3>Remote, worldwide</h3><p>Taking on new projects and long-term partnerships</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <p class="eyebrow">( 07 ) — Contact</p>
+    <h2 class="contact-title"><span class="ct-line">Let's build</span><span class="ct-line ct-outline">something</span><span class="ct-line">great.</span></h2>
+    <div class="contact-actions">
+      <a href="mailto:cezary.siwa@gmail.com" class="btn btn-big magnetic"><span>cezary.siwa@gmail.com</span></a>
+      <a href="https://www.upwork.com/freelancers/~017c608cbf3e521e3b" target="_blank" rel="noopener" class="btn btn-ghost magnetic"><span>Hire me on Upwork ↗</span></a>
+    </div>
+    <ul class="contact-social">
+      <li><a href="https://www.linkedin.com/in/cezary-s-36584647/" target="_blank" rel="noopener" class="link-roll"><span data-text="LinkedIn ↗">LinkedIn ↗</span></a></li>
+      <li><a href="https://github.com/cezarys" target="_blank" rel="noopener" class="link-roll"><span data-text="GitHub ↗">GitHub ↗</span></a></li>
+      <li><a href="https://www.upwork.com/freelancers/~017c608cbf3e521e3b" target="_blank" rel="noopener" class="link-roll"><span data-text="Upwork ↗">Upwork ↗</span></a></li>
+    </ul>
+  </section>
+</main>
+
+<footer class="footer">
+  <span>© <span class="year"></span> Cezary Siwa</span>
+  <span>WordPress · WooCommerce · React · Webflow</span>
+  <a href="#top" class="link-roll"><span data-text="Back to top ↑">Back to top ↑</span></a>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/DrawSVGPlugin.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script>
 </body>
-<script type="text/javascript" src="dist/all.js.min.js"></script>
 </html>
