@@ -242,7 +242,7 @@ ul, ol { list-style: none; }
 
 .hero-scroll { position: relative; width: 120px; height: 120px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; }
 .hero-scroll svg { position: absolute; inset: 0; animation: spin 12s linear infinite; }
-.hero-scroll text { font-family: var(--mono); font-size: 9.5px; letter-spacing: .25em; text-transform: uppercase; fill: var(--ink); }
+.hero-scroll text { font-family: var(--mono); font-size: 9.5px; text-transform: uppercase; fill: var(--ink); } /* spacing comes from textLength = circumference */
 .hero-scroll i { font-style: normal; font-size: 26px; color: var(--accent); }
 @keyframes spin { to { transform: rotate(360deg); } }
 
