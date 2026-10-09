@@ -1,0 +1,99 @@
+/* ---------- case study pages (loaded after style.css) ---------- */
+/* no custom cursor / Lenis here, so give the native cursor back */
+body, a, button { cursor: auto !important; }
+a, button { cursor: pointer !important; }
+
+.case { --case: var(--accent); }
+.case .nav { mix-blend-mode: normal; background: linear-gradient(var(--bg) 40%, transparent); }
+
+/* reveal: only hidden when JS is running, so content is never lost */
+.js .rv { opacity: 0; transform: translateY(40px); transition: opacity .9s var(--ease), transform .9s var(--ease); }
+.js .rv.in { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) { .js .rv { opacity: 1; transform: none; transition: none; } }
+
+.case-hero { padding: 150px var(--gutter) 60px; }
+.case-hero .eyebrow a { color: var(--ink); }
+.case-hero .eyebrow a:hover { color: var(--case); }
+.case-title {
+  font-family: var(--display); font-weight: 800;
+  font-size: clamp(44px, 10vw, 168px); line-height: .92; letter-spacing: -.045em;
+  text-transform: uppercase; overflow-wrap: anywhere;
+}
+.case-title span { color: var(--case); }
+.case-lead { max-width: 820px; margin-top: 36px; font-size: clamp(18px, 2vw, 26px); line-height: 1.45; color: #cfccc6; }
+
+.case-meta {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  margin-top: 64px; border-top: 1px solid var(--line);
+}
+.case-meta div { padding: 22px 20px 0 0; }
+.case-meta dt { font-family: var(--mono); font-size: 11px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.case-meta dd { font-size: 16px; }
+.case-meta a { border-bottom: 1px solid var(--case); }
+.case-meta a:hover { color: var(--case); }
+
+/* browser frame */
+.shot { padding: 0 var(--gutter); }
+.browser { border-radius: 18px; overflow: hidden; background: var(--bg-2); border: 1px solid var(--line); box-shadow: 0 40px 120px rgba(0, 0, 0, .5); }
+.browser-bar { display: flex; align-items: center; gap: 7px; padding: 13px 16px; border-bottom: 1px solid var(--line); }
+.browser-bar i { width: 11px; height: 11px; border-radius: 50%; background: #3a3a3e; }
+.browser-bar span { margin-left: 14px; font-family: var(--mono); font-size: 12px; color: var(--muted); }
+.browser img { display: block; width: 100%; height: auto; }
+
+.case-section { padding: clamp(90px, 12vw, 170px) var(--gutter) 0; }
+.case-overview { display: grid; grid-template-columns: 1fr 2fr; gap: 6vw; }
+.case-overview p { font-size: clamp(17px, 1.5vw, 21px); color: #cfccc6; max-width: 760px; }
+.case-overview p + p { margin-top: 1.2em; }
+
+.case-h2 { font-family: var(--display); font-weight: 800; font-size: clamp(32px, 5vw, 72px); line-height: 1; letter-spacing: -.035em; margin-bottom: 56px; }
+.case-h2 em { font-style: normal; color: var(--case); }
+
+.highlights { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 24px; overflow: hidden; }
+.highlights li { background: var(--bg); padding: 36px 32px 40px; transition: background .4s; }
+.highlights li:hover { background: var(--bg-2); }
+.highlights small { font-family: var(--mono); font-size: 12px; color: var(--case); }
+.highlights h3 { font-family: var(--display); font-size: 22px; line-height: 1.15; margin: 18px 0 12px; }
+.highlights p { color: var(--muted); font-size: 15px; }
+
+/* desktop + two phones */
+.gallery { display: grid; grid-template-columns: 2.2fr 1fr 1fr; gap: 24px; align-items: start; }
+.phone { border-radius: 34px; padding: 9px; background: #1c1c1f; border: 1px solid var(--line); box-shadow: 0 30px 80px rgba(0, 0, 0, .5); }
+.phone img { display: block; width: 100%; height: auto; border-radius: 26px; }
+.gallery .phone:nth-child(3) { margin-top: 80px; }
+
+.next {
+  display: block; margin: clamp(90px, 12vw, 170px) var(--gutter) 0;
+  padding: 56px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+}
+.next small { font-family: var(--mono); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.next strong { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 14px; font-family: var(--display); font-weight: 800; font-size: clamp(28px, 7vw, 110px); line-height: 1; letter-spacing: -.04em; text-transform: uppercase; transition: color .4s; }
+.next strong span { min-width: 0; overflow-wrap: anywhere; }
+.next strong i { font-style: normal; transition: transform .5s var(--ease); }
+.next:hover strong { color: var(--next, var(--accent)); }
+.next:hover strong i { transform: translateX(16px); }
+
+.case-cta { text-align: center; padding: clamp(90px, 12vw, 170px) var(--gutter) 120px; }
+.case-cta h2 { font-family: var(--display); font-weight: 800; font-size: clamp(32px, 6vw, 92px); line-height: .95; letter-spacing: -.04em; text-transform: uppercase; }
+.case-cta h2 span { color: var(--case); }
+
+/* index of all cases (work/) */
+.cases-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 28px; padding: 0 var(--gutter); }
+.cases-grid a { display: block; }
+.cases-grid img { display: block; width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); transition: transform .6s var(--ease); }
+.cases-grid a:hover img { transform: translateY(-6px); }
+.cases-grid h2 { font-family: var(--display); font-size: 24px; margin-top: 18px; }
+.cases-grid p { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); margin-top: 4px; }
+
+@media (max-width: 900px) {
+  .case-meta { grid-template-columns: 1fr 1fr; }
+  .case-overview { grid-template-columns: 1fr; gap: 0; }
+  .gallery { grid-template-columns: 1fr 1fr; }
+  .gallery .browser { grid-column: 1 / -1; }
+  .gallery .phone:nth-child(3) { margin-top: 40px; }
+  .case-hero { padding-top: 120px; }
+}
+@media (max-width: 520px) {
+  .highlights li { padding: 28px 22px 32px; }
+  .phone { border-radius: 24px; padding: 6px; }
+  .phone img { border-radius: 19px; }
+}

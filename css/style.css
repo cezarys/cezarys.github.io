@@ -487,3 +487,5 @@ ul, ol { list-style: none; }
   .grain, .hero-scroll svg, .pulse { animation: none; }
   .statement-text .word { opacity: 1; }
 }
+
+.work-all { margin-top: 56px; }
