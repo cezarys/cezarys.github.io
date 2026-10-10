@@ -413,6 +413,7 @@ ul, ol { list-style: none; }
 .timeline li { position: relative; display: grid; grid-template-columns: 90px 1fr; gap: 20px; padding: 0 0 54px; }
 .timeline li::before { content: ''; position: absolute; left: -36px; top: 8px; width: 13px; height: 13px; border-radius: 50%; background: var(--bg); border: 1px solid var(--accent); }
 .tl-year { font-family: var(--mono); color: var(--accent); }
+.tl-year small { display: block; font-size: 1em; color: var(--muted); }
 .timeline h3 { font-family: var(--display); font-size: 26px; line-height: 1.1; letter-spacing: -.02em; }
 .timeline p { color: var(--muted); margin-top: 6px; }
 
@@ -463,6 +464,7 @@ ul, ol { list-style: none; }
   .stat { padding: 36px 16px; }
   .btn-big, .btn-ghost { width: 100%; padding: 22px 24px; }
   .timeline li { grid-template-columns: 1fr; gap: 4px; }
+  .tl-year small { display: inline; margin-left: .5em; }
 }
 
 /* ---------- analytics consent ---------- */
