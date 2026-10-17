@@ -45,20 +45,7 @@
       addEventListener('load', function () { setTimeout(load, 3500); });
     })();
   </script>
-  <script>
-    (function () {
-      var done = false, evs = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
-      function load() {
-        if (done) return; done = true;
-        var s = document.createElement('script');
-        s.async = true; s.src = 'https://www.googletagmanager.com/gtag/js?id=G-9VTT3Y4H9Z';
-        document.head.appendChild(s);
-      }
-      evs.forEach(function (e) { addEventListener(e, load, { passive: true, once: true }); });
-      addEventListener('load', function () { setTimeout(load, 3500); });
-    })();
-    document.documentElement.className = 'js';
-  </script>
+  <script>document.documentElement.className = 'js';</script>
   <link rel="preload" href="/fonts/syne.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/style.css">
@@ -81,9 +68,10 @@
   <section class="case-hero">
     <p class="eyebrow">( Selected work )</p>
     <h1 class="case-title">Case <span>studies.</span></h1>
-    <p class="case-lead">Nine of 1,300+ projects since 2013: custom WordPress and Shopify themes for manufacturers, shops, clinics and associations across Europe and the US.</p>
+    <p class="case-lead">Ten of 1,300+ projects since 2013: WooCommerce checkout logic, custom WordPress and Shopify themes for stores, manufacturers, clinics and associations across Europe and the US.</p>
   </section>
   <div class="cases-grid">
+    <a href="/work/chemical-collective/" class="rv"><img src="/images/work/cases/chemical-collective-og.jpg" alt="Chemical Collective website" width="1200" height="630" loading="eager"><h2>Chemical Collective</h2><p>WooCommerce cart &amp; checkout · Research chemicals (high-risk)</p></a>
     <a href="/work/hempo-solutions/" class="rv"><img src="/images/work/cases/hempo-solutions-og.jpg" alt="Hempo Solutions website" width="1200" height="630" loading="eager"><h2>Hempo Solutions</h2><p>Custom WordPress theme · CBD manufacturing (B2B)</p></a>
     <a href="/work/naturalis-dog/" class="rv"><img src="/images/work/cases/naturalis-dog-og.jpg" alt="Naturalis Dog® website" width="1200" height="630" loading="eager"><h2>Naturalis Dog®</h2><p>Custom Shopify theme · Pet food (D2C)</p></a>
     <a href="/work/gallus-detox/" class="rv"><img src="/images/work/cases/gallus-detox-og.jpg" alt="Gallus Detox website" width="1200" height="630" loading="eager"><h2>Gallus Detox</h2><p>Custom WordPress theme · Healthcare · medical detox</p></a>
@@ -106,7 +94,7 @@
 
 <footer class="footer">
   <span>© <span class="year">2026</span> Cezary Siwa</span>
-  <span>WordPress · WooCommerce · Shopify · Webflow</span>
+  <span>WooCommerce · Payments · Integrations · Shopify</span>
   <a href="/" class="link-roll"><span data-text="Home ↑">Home ↑</span></a>
 </footer>
 
